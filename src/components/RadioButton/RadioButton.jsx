@@ -1,5 +1,6 @@
 import css from "./RadioButton.module.css";
 import clsx from "clsx";
+import icons from "../../assets/icons/icons.svg";
 
 const RadioButton = ({ name, value, checked, onChange, icon, label }) => {
   const handleClick = (e) => {
@@ -21,7 +22,7 @@ const RadioButton = ({ name, value, checked, onChange, icon, label }) => {
         className={css.hiddenInput}
       />
       <svg className={css.icon}>
-        <use href={`/src/assets/icons/icons.svg#icon-${icon}`} />
+        <use href={`${icons}#icon-${icon}`} />
       </svg>
       {label}
     </label>

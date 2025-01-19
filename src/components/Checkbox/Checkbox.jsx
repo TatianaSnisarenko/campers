@@ -1,5 +1,6 @@
 import css from "./Checkbox.module.css";
 import clsx from "clsx";
+import icons from "../../assets/icons/icons.svg";
 
 const Checkbox = ({ name, checked, onChange, label }) => {
   return (
@@ -12,7 +13,7 @@ const Checkbox = ({ name, checked, onChange, label }) => {
         className={css.hiddenInput}
       />
       <svg className={css.icon}>
-        <use href={`/src/assets/icons/icons.svg#icon-${name}`} />
+        <use href={`${icons}#icon-${name}`} />
       </svg>
       {label}
     </label>

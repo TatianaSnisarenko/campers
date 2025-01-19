@@ -1,5 +1,5 @@
 import css from "./SearchBar.module.css";
-
+import icons from "../../assets/icons/icons.svg";
 import { useId, useState } from "react";
 import Checkbox from "../Checkbox/Checkbox";
 import RadioButton from "../RadioButton/RadioButton";
@@ -60,7 +60,7 @@ export default function SearchBar({ handleSearch }) {
                 formState.location ? css.filled : ""
               }`}
             >
-              <use href="/src/assets/icons/icons.svg#icon-Map" />
+              <use href={`${icons}#icon-Map`} />
             </svg>
             <input
               id={locationId}

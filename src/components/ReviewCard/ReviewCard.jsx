@@ -1,5 +1,6 @@
 import css from "./ReviewCard.module.css";
 import clsx from "clsx";
+import icons from "../../assets/icons/icons.svg";
 
 const ReviewCard = ({ review }) => {
   const { reviewer_name, reviewer_rating, comment } = review;
@@ -25,7 +26,7 @@ const ReviewCard = ({ review }) => {
           width="16px"
           height="16px"
         >
-          <use href={`/src/assets/icons/icons.svg#icon-star`} />
+          <use href={`${icons}#icon-star`} />
         </svg>
       );
     }

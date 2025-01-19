@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import css from "./RatingLocation.module.css";
+import icons from "../../assets/icons/icons.svg";
 
 export default function RatingLocation({ reviewsCount, rating, location }) {
   return (
@@ -10,7 +11,7 @@ export default function RatingLocation({ reviewsCount, rating, location }) {
             [css.active]: reviewsCount > 0,
           })}
         >
-          <use href={`/src/assets/icons/icons.svg#icon-star`} />
+          <use href={`${icons}#icon-star`} />
         </svg>
         {reviewsCount > 0 ? (
           <p className={css.rating}>
@@ -22,7 +23,7 @@ export default function RatingLocation({ reviewsCount, rating, location }) {
       </div>
       <div className={css.locationDetails}>
         <svg className={css.locationIcon}>
-          <use href="/src/assets/icons/icons.svg#icon-Map" />
+          <use href={`${icons}#icon-Map`} />
         </svg>
         <p className={css.location}>{location}</p>
       </div>

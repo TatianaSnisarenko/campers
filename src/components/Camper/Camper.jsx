@@ -1,9 +1,8 @@
 import css from "./Camper.module.css";
-
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { addFavorite, removeFavorite } from "../../redux/favorites/slice";
-
+import icons from "../../assets/icons/icons.svg";
 import FeatureList from "../FeatureList/FeatureList";
 import Button from "../Button/Button";
 import RatingLocation from "../RatingLocation/RatingLocation";
@@ -54,7 +53,7 @@ export default function Camper({ camper }) {
               onClick={handleFavoriteClick}
             >
               <svg className={css.favoriteIcon}>
-                <use href={`/src/assets/icons/icons.svg#icon-heart`} />
+                <use href={`${icons}#icon-heart`} />
               </svg>
             </button>
           </div>
